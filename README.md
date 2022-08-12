@@ -8,23 +8,11 @@ Welcome to follow and star!
 ## Table of Contents
 
 - [Format and Terminology](#format-and-terminology)
-- [Atari](#atari)
-  - [Arxiv](#arxiv)
-  - [ICML 2022](#icml-2022)
-  - [AAAI 2022](#aaai-2022)
-  - [ICLR 2022](#iclr-2022)
-  - [NeurIPS 2021](#neurips-2021)
-  - [ICML 2021](#icml-2021)
+- Envs
+    - [Atari](#atari)
+    - [MuJoCo](#mujoco)
+    - [MPE](#mpe)
 - [Contributing](#contributing)
-
-
-![image info](./architecture.png)
-
-
-<div align=center>
-<img src=./dt-architecture.gif/>
-</div>
-
 
 ## Format and Terminology
 
@@ -64,7 +52,7 @@ Env Name
 ## Atari
 
 <div align=center>
-<img src=./image/atari_pong.gif/>
+<img src=./image/atari_pong.gif height="200px"/>
 </div>
 
 
@@ -95,7 +83,7 @@ Env Name
 ## MuJoCo
 
 <div align=center>
-<img src=./image/mujoco_hopper.gif/>
+<img src=./image/mujoco_hopper.gif height="200px"/>
 </div>
 
 
@@ -118,10 +106,11 @@ Env Name
   - [Public Agent]: 
 
 
-## MPE (in PettingZoo)
+## MPE
+(PettingZoo version)
 
 <div align=center>
-<img src=./image/mpe_simple_spread.gif/>
+<img src=./image/mpe_simple_spread.gif height="200px"/>
 </div>
 
 
