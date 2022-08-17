@@ -1,8 +1,8 @@
-# Contributing to Awesome Decision Transformer
+# Contributing to Awesome RL Envs
 
-Anyone interested in Decision Transformer is welcomed to contribute to this repo:
+Anyone interested in RL Envs is welcomed to contribute to this repo:
 
-- You can add the classical or latest publications / tutorials directly to `README.md` and `your_create.md`.
+- You can add any useful academic envs, or enrich existing envs' descriptions to `README.md` and `your_create.md`.
 
 - You are welcomed to update anything helpful.
 
@@ -15,12 +15,12 @@ In general, we follow the "fork-and-pull" Git workflow.
 
 2. Clone this repo to your own machine.
     ```
-    git clone https://github.com/<your_username>/awesome-decision-transformer.git
+    git clone https://github.com/<your_username>/awesome-rl-envs.git
     ```
 
 3. Make necessary changes and commit those changes.
     
--  If you go to this project directory and execute the command `git status`, you'll see there are changes.
+- If you go to this project directory and execute the command `git status`, you'll see there are changes.
 
 - Add those changes to the branch using the `git add` command:
     ```
@@ -32,7 +32,7 @@ In general, we follow the "fork-and-pull" Git workflow.
     ```
     * There are some standards of commit message.
     * `Template:` add/feature/polish(committer_name or project_name): commit message
-    * `For example:` add(jrn): add one paper about VE on #neurips2021
+    * `For example:` add(zlx): add env vizdoom
 
 
 4. Push your work back up to your fork.
