@@ -8,7 +8,7 @@ Welcome to follow and star!
 ## Table of Contents
 
 - [Format and Terminology](#format-and-terminology)
-- Envs
+- [Envs](#envs)
     - [Atari](#atari)
     - [MuJoCo](#mujoco)
     - [MPE](#mpe)
@@ -29,29 +29,55 @@ Env Name
   - Env Repo
   - Blog/Doc
   - Public Agent
-- (opt.)Special Subenv
+- (optional) Special Subenv
 
 
 ### Terminology in the description table
-1. Scale. Time cost to train a fair policy, specifically:
-      - **Micro**: < 30 minutes
-      - **Small**: 1-4 hours
-      - **Middle**: 8-24 hours
-      - **Large**: > 1 day
-2. State/Observation. Can be **Vector**, **Image**, or **Nested**.
-3. Action. Can be **Discrete**, **Continuous**, or **Hybrid**
-4. Reward. There are some special types of rewards:
-      - **Fluctuating reward scale (Fluctuate)**
-      - **Sparse reward (Sparse)**
-      - **Multi-reward mixture (Multi)**
-5. Termination. Can be **Finite** or **Infinite**.
-5. Others.
-      - **Procedural Content Generation (PCG)**
-      - **Large Difference among sub-envs (LD)**
-      - **Multi Agent (MA)**
+1. Scale. Time cost to train a fair policy, with 1 NVIDIA V100 + 32-core CPU.
+
+| Micro        | Small       | Middle     | Large     |
+|--------------|-------------|------------|-----------|
+| < 30 minutes | 1-4 hours   | 8-24 hours | > 1 day   |
+| Pendulum, CartPole, Gym hybrid | [MPE](#mpe), Slimevolley, [MuJoCo](#mujoco)   | Procgen, D4rl, [Atari](#atari), [SMAC](#smac) | MineRL, CARLA, GRF   |
+
+2. State/Observation. 
+
+| Vector             | Image                        | Nested     |
+|--------------------|------------------------------|------------|
+| A list of numbers. | Often 3-channel RGB image.   | Like `struct` in C language: Containing multiple members, and each member can be Vector or Image. |
+| [MPE](#mpe), [MuJoCo](#mujoco)   | [Atari](#atari), DMControl | MineRL, CARLA   |
+
+3. Action.
+ 
+| Discrete  | Continuous   | Hybrid        |
+|-----------|--------------|---------------|
+| Integer   |  Float       | Contains both |
+| [Atari](#atari), [SMAC](#smac)   | [MuJoCo](#mujoco), DMControl | Gym hybrid, CARLA   |
+
+4. Reward.
+
+| Many orders of magnitude (Magnitude)  | Sparse reward (Sparse)   | Multi-reward mixture (Multi)        |
+|-----------|--------------|---------------|
+| Magnitudes and frequencies of rewards vary wildly between different games or episodes. You can refer to [Learning values across many orders of magnitude](https://arxiv.org/abs/1602.07714). |  Rewards extrinsic to the agent are extremely sparse, or absent altogether. You can refer to [ICM paper](https://arxiv.org/abs/1705.05363v1) and [RND paper](https://arxiv.org/abs/1810.12894).    | More than one type of reward is measured. You can refer to [Efficient Reinforcement Learning with Multiple Reward Functions for Randomized Controlled Trial Analysis](http://people.seas.harvard.edu/~samurphy/papers/lizotte10multipleFINAL.pdf). |
+| `Centipede` of [Atari](#atari)   | Minigrid, [SMAC](#smac) | CARLA   |
+
+5. Termination.
+
+| Finite  | Infinite  | 
+|---------|-----------|
+| An episode will end at some point.    |  An episode will not end until you terminate it.   |
+| [Atari](#atari), [SMAC](#smac)   | `HalfCheetah` of [MuJoCo](#mujoco) |
+
+6. Others.
+
+| Procedural Content Generation (PCG)  | Large Difference among sub-envs (LD)   | Multi Agent (MA)     |
+|-----------|--------------|---------------|
+| Sub-environments are randomly created, encouraging agent to robustly learn a relevant skill, other than memorizing specific trajectories. You can refer to [Procgen paper](https://arxiv.org/abs/1912.01588).   |  Different sub-envs vary a lot. You can refer to the radar plot in [bsuite](https://github.com/deepmind/bsuite).    | You must control more than one agent at a time. You can refer to [An Overview of Multi-Agent Reinforcement Learning from Game Theoretical Perspective](https://arxiv.org/abs/2011.00583). |
+| Procgen   | [MuJoCo](#mujoco), [MPE](#mpe), DMControl | [MPE](#mpe), [SMAC](#smac), GRF   |
 
 
-## Atari
+## Envs
+### Atari
 
 
 | Pong   | Qbert | SpaceInvaders   | MontezumaRevenge    | 
@@ -81,7 +107,7 @@ Env Name
     - Public Agent: [Random Network Distillation (RND)](https://github.com/openai/random-network-distillation)
     - Public Agent: [Go-Explore](https://github.com/uber-research/go-explore)
 
-## MuJoCo
+### MuJoCo
 
 | Hopper   | HalfCheetah | Ant   | Walker2D    | 
 |--------|-------------|----------|-----------|
@@ -99,7 +125,7 @@ Env Name
   - Action space: ``Box(-1.0, 1.0, (3,), float32)``
   - Reward range: ``(-inf, inf)``
 - Useful Links
-  - Env Repo: [mujoco py](https://github.com/openai/mujoco-py)
+  - Env Repo: [mujoco (by DeepMind)](https://github.com/deepmind/mujoco), [mujoco-py (by OpenAI)](https://github.com/openai/mujoco-py)
   - Blog/Doc: [Official Gym Documentation](https://www.gymlibrary.ml/environments/mujoco/)
   - Blog/Doc: DI-engine [doc](https://di-engine-docs.readthedocs.io/en/latest/13_envs/mujoco.html) | [文档](https://di-engine-docs.readthedocs.io/zh_CN/latest/13_envs/mujoco_zh.html)
   - Public Agent: [Stable Baselines 3](https://github.com/DLR-RM/stable-baselines3), RL Baselines3 Zoo [TD3](https://github.com/DLR-RM/rl-baselines3-zoo/blob/master/hyperparams/td3.yml) | [PPO](https://github.com/DLR-RM/rl-baselines3-zoo/blob/master/hyperparams/ppo.yml) | [SAC](https://github.com/DLR-RM/rl-baselines3-zoo/blob/master/hyperparams/sac.yml)
@@ -107,7 +133,7 @@ Env Name
   - Public Agent: [ChainerRL](https://github.com/chainer/chainerrl/tree/master/examples/mujoco)
 
 
-## MPE
+### MPE
 (PettingZoo version)
 
 | Simple Adversary   | Simple Speaker Listener | Simple Spread  | Simple World Comm | 
@@ -134,7 +160,7 @@ Env Name
   - Public Agent: [MAPPO](https://github.com/marlbenchmark/on-policy)
 
 
-## SMAC
+### SMAC
 
 | 3s_vs_5z   | 2c_vs_64zg | corridor   | 
 |------------|------------|------------|
