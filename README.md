@@ -172,10 +172,11 @@ Env Name
 
 
 - Overview: SMAC is an environment for Multi-Agent collaborative Reinforcement Learning (MARL) on Blizzard StarCraft II, which is short for "StarCraft Multi-Agent Challenge". SMAC uses Blizzard StarCraft II’s machine learning API and DeepMind’s PySC2 to provide a friendly interface for the interaction between agents and StarCraft II. Compared to PySC2, SMAC focuses on a decentralized micro-operation scheme, where each agent of the game is controlled by a separate RL agent.
-- Spaces(take `XXXX` for example)
-  - Observation space:
-  - Action space:
-  - Reward range:
+- Spaces (take `3s_vs_5z` for example)
+  - Agent number: 3
+  - Observation space: ``Box(-inf, inf, (48, ), float32)`` (obs) & ``Box(-inf, inf, (68, ), float32)`` (state)
+  - Action space: ``Discrete(11)``
+  - Reward range: ``(-inf, inf)``
 - Useful Links
   - Env Repo: [SMAC](https://github.com/oxwhirl/smac)
   - Blog/Doc: DI-engine [doc](https://di-engine-docs.readthedocs.io/en/latest/13_envs/smac.html) | [文档](https://di-engine-docs.readthedocs.io/zh_CN/latest/13_envs/smac_zh.html)
