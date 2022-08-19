@@ -1,4 +1,4 @@
-# Awesome RL Envs
+# Awesome RL Env Zoo
 
 This is a collection of **RL envs** which are frequently used in **academic researches**.
 And the repository will be continuously updated.

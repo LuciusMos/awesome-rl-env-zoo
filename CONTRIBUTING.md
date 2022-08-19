@@ -1,6 +1,6 @@
-# Contributing to Awesome RL Envs
+# Contributing to Awesome RL Env Zoo
 
-Anyone interested in RL Envs is welcomed to contribute to this repo:
+Anyone interested in academic RL Envs is welcomed to contribute to this repo:
 
 - You can add any useful academic envs, or enrich existing envs' descriptions to `README.md` and `your_create.md`.
 
@@ -15,7 +15,7 @@ In general, we follow the "fork-and-pull" Git workflow.
 
 2. Clone this repo to your own machine.
     ```
-    git clone https://github.com/<your_username>/awesome-rl-envs.git
+    git clone https://github.com/<your_username>/awesome-rl-env-zoo.git
     ```
 
 3. Make necessary changes and commit those changes.
