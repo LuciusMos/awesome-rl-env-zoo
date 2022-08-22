@@ -96,7 +96,7 @@ Env Name
 - Useful Links
   - Env Repo: [The Arcade Learning Environment (ALE)](https://github.com/mgbellemare/Arcade-Learning-Environment)
   - Blog/Doc: [Official Gym Documentation](https://www.gymlibrary.ml/environments/atari/)
-  - Blog/Doc: DI-engine [doc](https://di-engine-docs.readthedocs.io/en/latest/13_envs/atari.html) | [文档](https://di-engine-docs.readthedocs.io/zh_CN/latest/13_envs/atari_zh.html)
+  - Blog/Doc: DI-engine doc ([English](https://di-engine-docs.readthedocs.io/en/latest/13_envs/atari.html) | [中文](https://di-engine-docs.readthedocs.io/zh_CN/latest/13_envs/atari_zh.html))
   - Public Agent: [Stable Baselines 3](https://github.com/DLR-RM/stable-baselines3), RL Baselines3 Zoo [DQN](https://github.com/DLR-RM/rl-baselines3-zoo/blob/master/hyperparams/dqn.yml) | [PPO](https://github.com/DLR-RM/rl-baselines3-zoo/blob/master/hyperparams/ppo.yml) | [A2C](https://github.com/DLR-RM/rl-baselines3-zoo/blob/master/hyperparams/a2c.yml)
   - Public Agent: [DI-engine](https://github.com/opendilab/DI-engine/tree/main/dizoo/atari)
   - Public Agent: [tianshou](https://github.com/thu-ml/tianshou/tree/master/examples/atari)
@@ -127,7 +127,7 @@ Env Name
 - Useful Links
   - Env Repo: [mujoco (by DeepMind)](https://github.com/deepmind/mujoco), [mujoco-py (by OpenAI)](https://github.com/openai/mujoco-py)
   - Blog/Doc: [Official Gym Documentation](https://www.gymlibrary.ml/environments/mujoco/)
-  - Blog/Doc: DI-engine [doc](https://di-engine-docs.readthedocs.io/en/latest/13_envs/mujoco.html) | [文档](https://di-engine-docs.readthedocs.io/zh_CN/latest/13_envs/mujoco_zh.html)
+  - Blog/Doc: DI-engine doc ([English](https://di-engine-docs.readthedocs.io/en/latest/13_envs/mujoco.html) | [中文](https://di-engine-docs.readthedocs.io/zh_CN/latest/13_envs/mujoco_zh.html))
   - Public Agent: [Stable Baselines 3](https://github.com/DLR-RM/stable-baselines3), RL Baselines3 Zoo [TD3](https://github.com/DLR-RM/rl-baselines3-zoo/blob/master/hyperparams/td3.yml) | [PPO](https://github.com/DLR-RM/rl-baselines3-zoo/blob/master/hyperparams/ppo.yml) | [SAC](https://github.com/DLR-RM/rl-baselines3-zoo/blob/master/hyperparams/sac.yml)
   - Public Agent: [DI-engine](https://github.com/opendilab/DI-engine/tree/main/dizoo/mujoco)
   - Public Agent: [ChainerRL](https://github.com/chainer/chainerrl/tree/master/examples/mujoco)
@@ -155,7 +155,7 @@ Env Name
 - Useful Links
   - Env Repo: [PettingZoo](https://github.com/Farama-Foundation/PettingZoo)
   - Blog/Doc: [Official Documentation](https://www.pettingzoo.ml/mpe/)
-  - Blog/Doc: DI-engine doc | [文档](https://di-engine-docs.readthedocs.io/zh_CN/latest/13_envs/multiagent_particle_zh.html)
+  - Blog/Doc: DI-engine doc ([中文](https://di-engine-docs.readthedocs.io/zh_CN/latest/13_envs/multiagent_particle_zh.html))
   - Public Agent: [DI-engine](https://github.com/opendilab/DI-engine/tree/main/dizoo/petting_zoo)
   - Public Agent: [MAPPO](https://github.com/marlbenchmark/on-policy)
 
@@ -179,7 +179,7 @@ Env Name
   - Reward range: ``(-inf, inf)``
 - Useful Links
   - Env Repo: [SMAC](https://github.com/oxwhirl/smac)
-  - Blog/Doc: DI-engine [doc](https://di-engine-docs.readthedocs.io/en/latest/13_envs/smac.html) | [文档](https://di-engine-docs.readthedocs.io/zh_CN/latest/13_envs/smac_zh.html)
+  - Blog/Doc: DI-engine doc ([English](https://di-engine-docs.readthedocs.io/en/latest/13_envs/smac.html) | [中文](https://di-engine-docs.readthedocs.io/zh_CN/latest/13_envs/smac_zh.html))
   - Public Agent: [DI-engine](https://github.com/opendilab/DI-engine/tree/main/dizoo/smac)
   - Public Agent: [PyMARL2](https://github.com/hijkzzz/pymarl2)
   - Public Agent: [RLlib](https://github.com/oxwhirl/smac/tree/master/smac/examples/rllib)
